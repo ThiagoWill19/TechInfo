@@ -4,7 +4,8 @@
 
 Esta é uma aplicação MVC (Model-View-Controller) desenvolvida em Java/Spring que consome a API News API para apresentar
 notícias de diferentes países. Com esta aplicação, os usuários podem visualizar notícias de diversas categorias, como
-tercnologia, ciência e negócios, filtrando por país.
+tercnologia, ciência e negócios, filtrando por país. Cada requisição traz até 100 notícias, apresentando as seguintes informações:
+data da publicação da notícia, título da notícia, autor e fonte. Ao clicar em um título o usuário será redirecionado para o site da notícia.
 
 ## **Tecnologias utilizadas:**
 - Java
