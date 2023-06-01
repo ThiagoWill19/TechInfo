@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background-color: #080918;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #10122d;
+}
+
+body {
+  background-color: #080918;
+  color: #eaeaea;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+  grid-template-areas: "base";
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  grid-area: base;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand p {
+  font-size: 22px;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 10px;
+  background: linear-gradient(270deg, #1e1239 40%, #080918 100%);
+}
+
+.info-time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-time small {
+  color: #9e76f5;
+  text-align: center;
+}
+
+.find {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.find button {
+  width: 60px;
+  text-decoration: none;
+  border: 1px solid #613eae;
+  border-radius: 20px;
+  background-color: #8a5bf0;
+}
+
+.find select {
+  background-color: #12142a;
+  border: 2px solid #22243e;
+  color: #eaeaea;
+  border-radius: 8px;
+  width: 150px;
+  padding: 5px;
+  text-align: center;
+  margin-right: 15px;
+}
+
+.find select:focus {
+  outline: none;
+  border-color: #613eae;
+}
+
+.find p {
+  padding: 5px;
+  text-align: center;
+}
+
+.news {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.news h2 {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  color: #d1d1d1;
+}
+
+.content-group {
+  overflow-y: scroll;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.content {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(260deg, #1e1239, #080918) 1;
+  padding-top: 30px;
+}
+
+.content:hover {
+	background: linear-gradient(260deg, rgb(16, 10, 31), #080918 );
+}
+
+.content small {
+  color: #d1d1d1;
+  margin-bottom: 10px;
+}
+
+.content a {
+  text-decoration: none;
+}
+
+.content h3 {
+	color: #fefefe;
+}
+
+.content p {
+	color:#613eae ;
+	margin-top: 5px;
+}
+
+.footer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #613eae;
+}
+
+@media (max-width: 768px) {
+  .info {
+    flex-direction: column;
+    border-image: linear-gradient(120deg, #080918 20%, #372264) 1;
+  }
+
+  .news {
+    width: 100%;
+  }
+}

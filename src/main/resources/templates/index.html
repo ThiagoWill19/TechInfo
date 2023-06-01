@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <title>TechInfo 🌐</title>
+  </head>
+  <body>
+    <nav>
+      <div class="info">
+        <div class="brand"><p>TechInfo 🌐</p></div>
+
+        <div class="find">
+          <form method="post" th:action="@{/noticias}">
+			  
+			  <select th:name="category" id="category">
+				  <option th:value="${cat}" th:text="${cat}"></option>	
+				  <option value="technology">Tecnologia</option>
+				  <option value="science">Ciências</option>
+				  <option value="business">Negócios</option>
+			  </select>
+			  
+			  <select th:name="countryCode" id="area">
+				  
+				  	<option th:value="${code}" th:text="${code}"></option>
+				  	<option value="br">Brasil</option>
+		            <option value="us">Estados Unidos</option>
+		            <option value="at">Àustria</option>
+		            <option value="au">Austrália</option>
+		            <option value="ar">Argentina</option>
+		            <option value="de">Alemanha</option>
+		            <option value="be">Bélgica</option>
+		            <option value="bg">Bulgária</option>
+		            <option value="ca">Canadá</option>
+		   			<option value="cn">China</option>
+		            <option value="co">Colômbia</option>
+		            <option value="kr">Coreia do Norte</option>
+		            <option value="cu">Cuba</option>
+		            <option value="fr">França</option>
+		            <option value="gr">Grécia</option>
+		            <option value="gb">Reino Unido</option>
+		            <option value="cz">República Checa</option>
+		            <option value="hk">Hong Kong</option>
+		            <option value="hu">Hungria</option>
+		            <option value="id">Indonésia</option>
+		            <option value="ie">Irlanda</option>
+		            <option value="il">Israel</option>
+		            <option value="in">Índia</option>
+		            <option value="it">Itália</option>
+		            <option value="jp">Japão</option>
+		            <option value="lt">Lituânia</option>
+		            <option value="lv">Letônia</option>
+		            <option value="ma">Marrocos</option>
+		            <option value="mx">México</option>
+		            <option value="my">Malásia</option>
+		            <option value="ng">Nigéria</option>
+		            <option value="no">Noruega</option>
+		            <option value="nz">Nova Zelândia</option>
+		            <option value="nl">Países Baixos</option>
+		            <option value="pl">Polónia</option>
+		            <option value="pt">Portugal</option>
+		            <option value="ru">Rússia</option>
+		            <option value="ro">Romênia</option>
+		            <option value="rs">Sergipá</option>
+		            <option value="se">Suécia</option>
+		            <option value="ch">Suíça</option>
+		            <option value="tr">Turquia</option>
+		            <option value="ua">Ucrânia</option>
+		            <option value="ve">Venezuela</option>
+		            <option value="za">Zâmbia</option>
+		      
+	          </select>
+	          <button type="submit" ><p>🔍</p></button>
+		  </form>
+        </div>
+      </div>
+      <div class="news">
+        <h2>Principais notícias</h2>
+        <div th:if="${newsList != null}" class="content-group" id="contents">
+			<div class="content" th:each="news : ${newsList}">
+				<a target="_blank" th:href="${news.url}">
+					<small th:text="${news.publishedAt}"></small>
+					<h3 th:text="${news.title}"></h3>
+					<br>
+					<p th:text="${news.author}"></p>
+					<p th:text=${news.source.name}></p>
+				</a>
+			</div>
+		</div>
+		<div th:if="${newsList.size() == 0}">
+			<div class="content">
+				<h3>Desculpe, não encontramos nenhuma notícia para o país selecionado 😕 <br>
+					Talvez nossa API não esteja cobrindo essa região no momento.</h3>
+			</div>
+		</div>
+      </div>
+      <div class="footer">
+        <p><strong>TechInfo₢ 2023 </strong>- Todos os direitos reservados</p>
+      </div>
+    </nav>
+  </body>
+</html>
