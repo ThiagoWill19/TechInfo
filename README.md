@@ -1,4 +1,4 @@
-https://github.com/ThiagoWill19/TechInfo# TechInfo
+# TechInfo
 
 **Aplicação MVC de consumo da API News API**
 
