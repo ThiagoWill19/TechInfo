@@ -1,4 +1,4 @@
-# TechInfo
+https://github.com/ThiagoWill19/TechInfo# TechInfo
 
 **Aplicação MVC de consumo da API News API**
 
@@ -18,7 +18,7 @@ tercnologia, ciência e negócios, filtrando por país.
  ## **Instalação e configuração**
 1. Clone o repositório para sua maquina local:
 
-	- `git clone https://github.com/seu-usuario/nome-do-repositorio.git`
+	- `git clone https://github.com/ThiagoWill19/TechInfo.git`
 	
 2. Configure a API News API:
 
@@ -35,7 +35,7 @@ tercnologia, ciência e negócios, filtrando por país.
 
 ## Utilização
 
-1. Acesse a página da aplicação em seu navegador: `http://localhost:8080/notícias`
+1. Acesse a página da aplicação em seu navegador: `http://localhost:8080/noticias`
 > Por padrão a página inicial apresenta notícias de technologia do Brasil.
 
 2. Selecione uma das categorias, Tecnologia, ciência ou negócios.
