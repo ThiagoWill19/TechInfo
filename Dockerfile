@@ -10,6 +10,6 @@ RUN mvn clean install
 FROM openjdk:17-jdk-slim
 EXPOSE 8080
 
-COPY --from=build /target/techinfo-0.0.1-SNAPSHOT.jar app.jar
+COPY --from=build /target/techinfo-0.0.1-SNAPSHOT.jar application.jar
 
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "application.jar"]
