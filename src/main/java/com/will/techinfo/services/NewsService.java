@@ -14,8 +14,7 @@ import com.will.techinfo.models.NewsResponse;
 @Service
 public class NewsService {
 
-	@Value("${news.api.key}")
-	private String apiKey;
+	private String apiKey = "c57e21040d7b4701832e9ff683bed4d1";
 
 	public List<News> getNews(String countryCode, String category) {
 
